@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/AG-Gate.iml" filepath="$PROJECT_DIR$/ace-gate/AG-Gate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-agent/ace-gate-agent.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-agent/ace-gate-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-common/ace-gate-common.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-common/ace-gate-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-client/ace-gate-demo-client.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-client/ace-gate-demo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-provider/ace-gate-demo-provider.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-provider/ace-gate-demo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-eureka/ace-gate-eureka.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-eureka/ace-gate-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ace-gate/ace-gate-way/ace-gate-way.iml" filepath="$PROJECT_DIR$/ace-gate/ace-gate-way/ace-gate-way.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/managementSys-master/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/common-util/common-util.iml" filepath="$PROJECT_DIR$/managementSys-master/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/config/config.iml" filepath="$PROJECT_DIR$/managementSys-master/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/eureka/eureka.iml" filepath="$PROJECT_DIR$/managementSys-master/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/fegin/fegin.iml" filepath="$PROJECT_DIR$/managementSys-master/fegin/fegin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managementSys-master/parent/parent.iml" filepath="$PROJECT_DIR$/managementSys-master/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vueDockerAdmin.iml" filepath="$PROJECT_DIR$/.idea/vueDockerAdmin.iml" />
+    </modules>
+  </component>
+</project>

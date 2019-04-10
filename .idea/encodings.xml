@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ace-gate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-agent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-demo/ace-gate-demo-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ace-gate/ace-gate-way" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/common-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/fegin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/managementSys-master/parent" charset="UTF-8" />
+  </component>
+</project>

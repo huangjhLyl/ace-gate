@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/managementSys-master/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/managementSys-master/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/managementSys-master/config/pom.xml" />
+        <option value="$PROJECT_DIR$/managementSys-master/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/managementSys-master/fegin/pom.xml" />
+        <option value="$PROJECT_DIR$/managementSys-master/parent/pom.xml" />
+        <option value="$PROJECT_DIR$/ace-gate/ace-gate-agent/pom.xml" />
+        <option value="$PROJECT_DIR$/ace-gate/ace-gate-common/pom.xml" />
+        <option value="$PROJECT_DIR$/ace-gate/ace-gate-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ace-gate/ace-gate-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/ace-gate/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

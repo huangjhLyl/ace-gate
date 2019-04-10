@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ace-gate-agent" />
+        <module name="ace-gate-common" />
+        <module name="ace-gate-demo-client" />
+        <module name="ace-gate-demo-provider" />
+        <module name="ace-gate-eureka" />
+        <module name="ace-gate-way" />
+        <module name="api-gateway" />
+        <module name="common-util" />
+        <module name="config" />
+        <module name="eureka" />
+        <module name="fegin" />
+        <module name="parent" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ace-gate-agent" target="1.8" />
+      <module name="ace-gate-common" target="1.6" />
+      <module name="ace-gate-demo" target="1.6" />
+      <module name="ace-gate-demo-client" target="1.8" />
+      <module name="ace-gate-demo-provider" target="1.6" />
+      <module name="ace-gate-eureka" target="1.8" />
+      <module name="ace-gate-way" target="1.6" />
+      <module name="AG-Gate" target="1.6" />
+      <module name="api-gateway" target="1.8" />
+      <module name="common-util" target="1.8" />
+      <module name="config" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="fegin" target="1.8" />
+      <module name="parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

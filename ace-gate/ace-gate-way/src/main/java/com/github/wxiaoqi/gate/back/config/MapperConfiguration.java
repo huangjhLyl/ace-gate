@@ -1,12 +1,14 @@
 package com.github.wxiaoqi.gate.back.config;
 
 
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
-import org.springframework.boot.bind.RelaxedPropertyResolver;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 /**
@@ -17,25 +19,26 @@ import tk.mybatis.spring.mapper.MapperScannerConfigurer;
  * @since 1.7
  */
 @Configuration
-@AutoConfigureAfter(MybatisConfiguration.class)
+@Data
+@Slf4j
+@Component
 public class MapperConfiguration implements EnvironmentAware {
 
-    private RelaxedPropertyResolver propertyResolver;
 
-    private String basePackage;
+//    @Value("${mybatis.basepackage}")
+//    private String basePackage;
+    private Environment evn;
 
     @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer(Environment environment){
-
+    public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-        mapperScannerConfigurer.setBasePackage(basePackage);
+        mapperScannerConfigurer.setBasePackage(evn.getProperty("mybatis.basepackage"));
         return mapperScannerConfigurer;
     }
 
-
+    @Override
     public void setEnvironment(Environment environment) {
-        this.propertyResolver = new RelaxedPropertyResolver(environment, null);
-        this.basePackage = propertyResolver.getProperty("mybatis.basepackage");
+        this.evn = environment;
     }
 }

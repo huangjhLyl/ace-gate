@@ -1,6 +1,7 @@
 package com.github.wxiaoqi.gate.back;
 
 import com.github.wxiaoqi.gate.back.util.DBLog;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -26,6 +27,6 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableRedisHttpSession(redisFlushMode = RedisFlushMode.IMMEDIATE)
 public class GateBootstrap {
     public static void main(String[] args) {
-        DBLog.getInstance().start();
-        new SpringApplicationBuilder(GateBootstrap.class).web(true).run(args);    }
+        SpringApplication.run(GateBootstrap.class, args);
+    }
 }

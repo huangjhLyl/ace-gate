@@ -49,8 +49,8 @@ server:
 
 eureka:
     instance:
-        statusPageUrlPath: ${management.context-path}/info
-        healthCheckUrlPath: ${management.context-path}/health
+        statusPageUrlPath: ${MANAGEMENT_CONTEXTPATH:}/info
+        healthCheckUrlPath: ${MANAGEMENT_CONTEXTPATH:}/health
         preferIpAddress: true
     client:
         serviceUrl:
@@ -106,7 +106,6 @@ zuul:
 ribbon:
   eureka:
     enabled: true
-
 #gate-demo-provider:
 #  ribbon:
 #    ConnectTimeout: 10000

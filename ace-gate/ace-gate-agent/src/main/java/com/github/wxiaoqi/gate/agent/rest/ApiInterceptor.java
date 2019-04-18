@@ -35,6 +35,8 @@ public class ApiInterceptor extends HandlerInterceptorAdapter {
         this.tokenHead = "access-token";
     }
 
+
+
     @Override
     public boolean preHandle(HttpServletRequest httpRequest, HttpServletResponse httpResponse, Object handler) throws Exception {
         HandlerMethod handlerMethod = (HandlerMethod) handler;

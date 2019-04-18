@@ -7,9 +7,7 @@ package com.github.wxiaoqi.gate.back.config;
  * @create 2017-06-01 8:12
  */
 
-import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 

@@ -3,7 +3,6 @@ package com.github.wxiaoqi.gate.back.config;
 import static com.google.common.base.Predicates.or;
 import static springfox.documentation.builders.PathSelectors.regex;
 
-import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.context.request.async.DeferredResult;
 
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -30,12 +30,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-public class SwaggerConfiguration extends WebMvcConfigurerAdapter implements EnvironmentAware {
+public class SwaggerConfiguration implements EnvironmentAware, WebMvcConfigurer {
 	private String basePackage;
 	private String creatName;
 	private String serviceName;
-	private RelaxedPropertyResolver propertyResolver;
 	private String description;
+    private Environment evn;
 	/**
 	 * 这个地方要重新注入一下资源文件，不然不会注入资源的，也没有注入requestHandlerMappping,相当于xml配置的
 	 *  <!--swagger资源配置-->
@@ -71,10 +71,10 @@ public class SwaggerConfiguration extends WebMvcConfigurerAdapter implements Env
 
 	@Override
 	public void setEnvironment(Environment environment) {
-		this.propertyResolver = new RelaxedPropertyResolver(environment, null);
-		this.basePackage = propertyResolver.getProperty("swagger.basepackage");
-		this.creatName = propertyResolver.getProperty("swagger.service.developer");
-		this.serviceName = propertyResolver.getProperty("swagger.service.name");
-		this.description = propertyResolver.getProperty("swagger.service.description");
+        evn = environment;
+		this.basePackage = evn.getProperty("swagger.basepackage");
+		this.creatName = evn.getProperty("swagger.service.developer");
+		this.serviceName = evn.getProperty("swagger.service.name");
+		this.description = evn.getProperty("swagger.service.description");
 	}
 }

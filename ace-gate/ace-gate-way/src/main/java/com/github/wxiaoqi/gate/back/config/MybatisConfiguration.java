@@ -8,7 +8,6 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,7 +33,7 @@ import java.util.Properties;
 public class MybatisConfiguration implements EnvironmentAware {
 
 
-    private RelaxedPropertyResolver propertyResolver;
+    private Environment evn;
 
     private String driveClassName;
     private String url;
@@ -122,26 +121,26 @@ public class MybatisConfiguration implements EnvironmentAware {
     }
 
     public void setEnvironment(Environment environment) {
-        this.propertyResolver = new RelaxedPropertyResolver(environment, null);
-        this.url = propertyResolver.getProperty("spring.datasource.url");
-        this.userName= propertyResolver.getProperty("spring.datasource.username");
-        this.password = propertyResolver.getProperty("spring.datasource.password");
-        this.driveClassName = propertyResolver.getProperty("spring.datasource.driver-class-name");
-        this.filters = propertyResolver.getProperty("spring.datasource.filters");
-        this.maxActive = propertyResolver.getProperty("spring.datasource.maxActive");
-        this.initialSize = propertyResolver.getProperty("spring.datasource.initialSize");
-        this.maxWait = propertyResolver.getProperty("spring.datasource.maxWait");
-        this.minIdle = propertyResolver.getProperty("spring.datasource.minIdle");
-        this.timeBetweenEvictionRunsMillis = propertyResolver.getProperty("spring.datasource.timeBetweenEvictionRunsMillis");
-        this.minEvictableIdleTimeMillis = propertyResolver.getProperty("spring.datasource.minEvictableIdleTimeMillis");
-        this.validationQuery = propertyResolver.getProperty("spring.datasource.validationQuery");
-        this.testWhileIdle = propertyResolver.getProperty("spring.datasource.testWhileIdle");
-        this.testOnBorrow = propertyResolver.getProperty("spring.datasource.testOnBorrow");
-        this.testOnReturn = propertyResolver.getProperty("spring.datasource.testOnReturn");
-        this.poolPreparedStatements = propertyResolver.getProperty("spring.datasource.poolPreparedStatements");
-        this.maxOpenPreparedStatements = propertyResolver.getProperty("spring.datasource.maxOpenPreparedStatements");
-        this.typeAliasesPackage = propertyResolver.getProperty("mybatis.typeAliasesPackage");
-        this.xmlLocation = propertyResolver.getProperty("mybatis.xmlLocation");
+        this.evn = environment;
+        this.url = evn.getProperty("spring.datasource.url");
+        this.userName= evn.getProperty("spring.datasource.username");
+        this.password = evn.getProperty("spring.datasource.password");
+        this.driveClassName = evn.getProperty("spring.datasource.driver-class-name");
+        this.filters = evn.getProperty("spring.datasource.filters");
+        this.maxActive = evn.getProperty("spring.datasource.maxActive");
+        this.initialSize = evn.getProperty("spring.datasource.initialSize");
+        this.maxWait = evn.getProperty("spring.datasource.maxWait");
+        this.minIdle = evn.getProperty("spring.datasource.minIdle");
+        this.timeBetweenEvictionRunsMillis = evn.getProperty("spring.datasource.timeBetweenEvictionRunsMillis");
+        this.minEvictableIdleTimeMillis = evn.getProperty("spring.datasource.minEvictableIdleTimeMillis");
+        this.validationQuery = evn.getProperty("spring.datasource.validationQuery");
+        this.testWhileIdle = evn.getProperty("spring.datasource.testWhileIdle");
+        this.testOnBorrow = evn.getProperty("spring.datasource.testOnBorrow");
+        this.testOnReturn = evn.getProperty("spring.datasource.testOnReturn");
+        this.poolPreparedStatements = evn.getProperty("spring.datasource.poolPreparedStatements");
+        this.maxOpenPreparedStatements = evn.getProperty("spring.datasource.maxOpenPreparedStatements");
+        this.typeAliasesPackage = evn.getProperty("mybatis.typeAliasesPackage");
+        this.xmlLocation = evn.getProperty("mybatis.xmlLocation");
     }
 
     @Bean

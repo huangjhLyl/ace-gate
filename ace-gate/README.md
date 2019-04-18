@@ -180,6 +180,7 @@ access-token:ApiGateToken eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXRlLWRlbW8tY2xpZW50I
 ```
 ## 外部访问IP黑白名单方式
 带实现
+## 已经全面升级为springboot2
 
 # 欢迎交流
 ![img](http://ofsc32t59.bkt.clouddn.com/17-06-16/1497595760484.jpg)

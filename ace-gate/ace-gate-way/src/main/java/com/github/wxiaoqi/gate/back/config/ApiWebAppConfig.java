@@ -19,6 +19,7 @@ public class ApiWebAppConfig implements WebMvcConfigurer {
     @Value("${gate.client.authHeader}")
     private String authHeader;
 
+    //静态资源不进行拦截
     private static List<String> EXCULDE_PATH = Arrays.asList("/**","/login/**","/index/**","/ag/**","/css/**"
             ,"/datas/**","/face/**","/font/**","/fonts/**","/images/**","/js/**"
             ,"/lay/**","/modules/**","/plugins/**");

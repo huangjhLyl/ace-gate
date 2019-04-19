@@ -27,7 +27,7 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
 
-        <!--<table tableName="base_user" domainObjectName="User" >-->
+        <!--<table tableName="base_user" domainObjectName="UserReq" >-->
         <!--<generatedKey column="id" identity="false" sqlStatement="myql"/>-->
         <!--</table>-->
         <!--<table tableName="base_menu" domainObjectName="Menu" >-->

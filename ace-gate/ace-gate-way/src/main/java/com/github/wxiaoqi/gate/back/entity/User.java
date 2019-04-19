@@ -2,9 +2,11 @@ package com.github.wxiaoqi.gate.back.entity;
 
 import java.util.Date;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Table(name = "base_user")
-public class User {
+@XmlRootElement
+public class User{
     @Id
     private Integer id;
 

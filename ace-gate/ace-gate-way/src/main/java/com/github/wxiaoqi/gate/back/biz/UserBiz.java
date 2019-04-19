@@ -54,7 +54,7 @@ public class UserBiz extends BaseBiz<UserMapper,User> {
      * @return
      */
 /*    public int getSecurityUserId(SecurityContextImpl securityContextImpl) {
-        org.springframework.security.core.userdetails.User securityUser = (org.springframework.security.core.userdetails.User) securityContextImpl.getAuthentication().getPrincipal();
+        org.springframework.security.core.userdetails.UserReq securityUser = (org.springframework.security.core.userdetails.UserReq) securityContextImpl.getAuthentication().getPrincipal();
         return this.getUserByUsername(securityUser.getUsername()).getId();
     }*/
 }
